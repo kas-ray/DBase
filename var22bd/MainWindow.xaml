@@ -1,0 +1,293 @@
+﻿<Window x:Class="var22bd.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:var22bd"
+        mc:Ignorable="d"
+        Title="Коническая зубчатая передача. Проектировочный расчет через внешний делительный диаметр для передач с круговыми зубьями" Height="656.5" Width="1057.425"><!--532-->
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Margin" Value="5,0,0,0"/>
+        </Style>
+        <Style TargetType="TextBlock" x:Key="mainText">
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Width" Value="40"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="Margin" Value="20,10,10,10"/>
+            <Setter Property="FontSize" Value="15"/>
+        </Style>
+        <Style TargetType="TextBlock" x:Key="subText">
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Width" Value="210"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="Margin" Value="15,5"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+        </Style>
+        <Style TargetType="TextBox" x:Key="inputText">
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Width" Value="100"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+            <Setter Property="Margin" Value="20 10"/>
+            <Setter Property="FontSize" Value="15"/>
+        </Style>
+        <Style TargetType="Button" x:Key="mainButt">
+            <Setter Property="Width" Value="150"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="FontSize" Value="17"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="250"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="0.3*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Column="0">
+
+            <StackPanel Orientation="Horizontal"  Grid.Column="0">
+            <TextBlock Style="{StaticResource mainText}"  Text="Kbe"/>
+                <TextBox x:Name="KbeM" Style="{StaticResource inputText}" Text="0,5"/>
+        </StackPanel>
+        
+        <StackPanel Orientation="Horizontal" Grid.Column="0">
+            <TextBlock Style="{StaticResource mainText}"  Text="Hb"/>
+                <TextBox x:Name="HbM" Style="{StaticResource inputText}" Text="400"/>
+        </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Grid.Column="0">
+                <TextBlock Style="{StaticResource mainText}"  Text="u"/>
+                <TextBox x:Name="uM" Style="{StaticResource inputText}" Text="2,5"/>
+            </StackPanel>
+            
+            <StackPanel Orientation="Horizontal" Grid.Column="0">
+                <TextBlock Style="{StaticResource mainText}"  Text="T"/>
+                <TextBox x:Name="TM" Style="{StaticResource inputText}" Text="2"/>
+            </StackPanel> 
+            
+            <StackPanel Orientation="Horizontal" Grid.Column="0">
+                <TextBlock Style="{StaticResource mainText}"  Text="tч"/>
+                <TextBox x:Name="tchM" Style="{StaticResource inputText}" Text="2"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Grid.Column="0">
+                <TextBlock Style="{StaticResource mainText}"  Text="n"/>
+                <TextBox x:Name="nM" Style="{StaticResource inputText}" Text="2"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Grid.Column="0">
+                <TextBlock Style="{StaticResource mainText}"  Text="βm"/>
+                <TextBox x:Name="bmM" Style="{StaticResource inputText}" Text="30"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Grid.Column="0">
+                <TextBlock Style="{StaticResource mainText}"  Text="z"/>
+                <TextBox x:Name="zM" Style="{StaticResource inputText}" Text="24"/>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1">
+            <StackPanel Orientation="Horizontal" Grid.Column="2">
+                <TextBlock Style="{StaticResource mainText}" Text="c"/>
+                <TextBlock x:Name="cM" Style="{StaticResource mainText}" HorizontalAlignment="Right"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Grid.Column="2">
+                <TextBlock Style="{StaticResource mainText}" Text="Khb"/>
+                <TextBlock x:Name="KhbM" Style="{StaticResource mainText}" HorizontalAlignment="Right"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Grid.Column="2">
+                <TextBlock Style="{StaticResource mainText}" Text="Nhe"/>
+                <TextBlock x:Name="NheM" Style="{StaticResource mainText}" HorizontalAlignment="Right"/>
+            </StackPanel>
+            
+            <StackPanel Orientation="Horizontal" Grid.Column="2">
+                <TextBlock Style="{StaticResource mainText}" Text="Nh0"/>
+                <TextBlock x:Name="Nh0M" Style="{StaticResource mainText}"  HorizontalAlignment="Right" FontSize="12" Width="102"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Grid.Column="2">
+                <TextBlock Style="{StaticResource mainText}" Text="σ`hp"/>
+                <TextBlock x:Name="sigmaHpShtM" Style="{StaticResource mainText}"  HorizontalAlignment="Right"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Grid.Column="2">
+                <TextBlock Style="{StaticResource mainText}" Text="Khl"/>
+                <TextBlock x:Name="KhlM" Width="102" Style="{StaticResource mainText}"  HorizontalAlignment="Right"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Grid.Column="2">
+                <TextBlock Style="{StaticResource mainText}" Text="mnm"/>
+                <TextBlock x:Name="mnmM" Width="102" Style="{StaticResource mainText}"  HorizontalAlignment="Right"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Grid.Column="2">
+                <TextBlock Style="{StaticResource mainText}" Text="σfp`"/>
+                <TextBlock x:Name="sigmaFpShtM" Style="{StaticResource mainText}"  HorizontalAlignment="Right"/>
+            </StackPanel>
+            
+        </StackPanel>
+
+        <StackPanel Grid.Column="2">
+            <StackPanel Orientation="Horizontal" Grid.Column="2">
+                <TextBlock Style="{StaticResource mainText}" Text="σhp"/>
+                <TextBlock x:Name="sigmaHpM" Style="{StaticResource mainText}"  HorizontalAlignment="Right" FontSize="12" Width="102"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Grid.Column="2">
+                <TextBlock Style="{StaticResource mainText}" Text="de"/>
+                <TextBlock x:Name="deM" Style="{StaticResource mainText}"  HorizontalAlignment="Right"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Grid.Column="2">
+                <TextBlock Style="{StaticResource mainText}" Text="Yf`"/>
+                <TextBlock x:Name="YfShtM" Width="102" Style="{StaticResource mainText}"  HorizontalAlignment="Right"/>
+            </StackPanel>
+            
+            <StackPanel Orientation="Horizontal" Grid.Column="2">
+                <TextBlock Style="{StaticResource mainText}" Text="Yf"/>
+                <TextBlock x:Name="YfM" Style="{StaticResource mainText}"  HorizontalAlignment="Right"/>
+            </StackPanel>
+            
+            <StackPanel Orientation="Horizontal" Grid.Column="2">
+                <TextBlock Style="{StaticResource mainText}" Text="xτ"/>
+                <TextBlock x:Name="xtaoM" Style="{StaticResource mainText}"  HorizontalAlignment="Right"/>
+            </StackPanel>
+            
+            <StackPanel Orientation="Horizontal" Grid.Column="2">
+                <TextBlock Style="{StaticResource mainText}" Text="ψbd"/>
+                <TextBlock x:Name="psibdM" Width="102" Style="{StaticResource mainText}"  HorizontalAlignment="Right"/>
+            </StackPanel>
+            
+            <StackPanel Orientation="Horizontal" Grid.Column="2">
+                <TextBlock Style="{StaticResource mainText}" Text="Kfβ"/>
+                <TextBlock x:Name="KfbM" Style="{StaticResource mainText}"  HorizontalAlignment="Right"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Grid.Column="2">
+                <TextBlock Style="{StaticResource mainText}" Text="σfp"/>
+                <TextBlock x:Name="sigmaFpM" Style="{StaticResource mainText}"  HorizontalAlignment="Right"/>
+            </StackPanel>
+
+            <Button Style="{StaticResource mainButt}" Content="Считать" Grid.Column="2" Click="Button_Click"/>
+        </StackPanel>
+        
+        
+        <ScrollViewer Grid.Column="3">
+            <StackPanel>
+                <TextBlock Style="{StaticResource subText}" Text="z - количество зубьев"/>
+                <TextBlock Style="{StaticResource subText}" Height="50"  Text="de - внешний делительный диаметр"/>
+                <TextBlock Style="{StaticResource subText}" Height="70"  Text="mnm - минимальный допустимый средний нормальный модуль"/>
+                <TextBlock Style="{StaticResource subText}" Height="70" Text="Кd=835 МПа-вспомогательный коэффициент"/>
+                <TextBlock Style="{StaticResource subText}" Height="85" Text="Kfβ - коэффициент, учитывающий распределение нагрузки по ширине венца конического колеса"/>
+                <TextBlock Style="{StaticResource subText}" Height="90" Text="ψbd - коэффициент ширины венца шестерни относительно среденего делительного диамметра"/>
+                <TextBlock Style="{StaticResource subText}" Height="50" Text="Кbe - коэффицент ширины зубчатого венцa"/>
+                <TextBlock Style="{StaticResource subText}" Height="50" Text="u - передаточное число открытой передачи"/>
+                <TextBlock Style="{StaticResource subText}" Height="50" Text="xτ - коэффициент изменения толщины зуба"/>
+                <TextBlock Style="{StaticResource subText}" Height="50" Text="Yf` - коэффициент, учитывающий форму зуба"/>
+                <TextBlock Style="{StaticResource subText}" Height="70" Text="Khb - коэффициент распределения нагрузки по ширине венца"/>
+                <TextBlock Style="{StaticResource subText}" Height="50" Text="βm - угол наклона линии зуба"/>
+                <TextBlock Style="{StaticResource subText}" Text="T - крутящий момент"/>
+                <TextBlock Style="{StaticResource subText}" Height="70" Text="tч - полное число часов работы передачи за расчетный срок службы"/>
+                <TextBlock Style="{StaticResource subText}" Text="n - частота вращения"/>
+                <TextBlock Style="{StaticResource subText}" Height="50" Text="Km=10 - вспомогательный коэффициент"/>
+                <TextBlock Style="{StaticResource subText}" Height="50" Text="σ` - допутимое контактное напряжение"/>
+                <TextBlock Style="{StaticResource subText}" Height="115" Text="Nh0 - базовое число циклов премены напряжений, соответствующее длительному пределу выносливости"/>
+                <TextBlock Style="{StaticResource subText}" Height="50" Text="Khl - коэффициент долговечности"/>
+                <TextBlock Style="{StaticResource subText}" Height="115" Text="σ`hp - допутимое напряжение, соответствующее базовому числу циклов перемены напряжения"/>
+            </StackPanel>
+        </ScrollViewer>
+        <ScrollViewer Grid.ColumnSpan="4" Grid.Row="1">
+            <Border BorderBrush="Black" BorderThickness="1">
+            <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" x:Name="deS" Text="de"/>
+                    <TextBlock Grid.Column="1" x:Name="HbS" Text="Hb"/>
+                    <TextBlock Grid.Column="2" x:Name="uS" Text="u"/>
+                    <TextBlock Grid.Column="3" x:Name="TS" Text="T"/>
+                    <TextBlock Grid.Column="4" x:Name="tchS" Text="tч"/>
+                    <TextBlock Grid.Column="5" x:Name="nS" Text="n"/>
+                    <TextBlock Grid.Column="6" x:Name="bmS" Text="βm"/>
+                    <TextBlock Grid.Column="7" x:Name="zS" Text="z"/>
+                    <TextBlock Grid.Column="8" x:Name="cS" Text="c"/>
+                    <TextBlock Grid.Column="9" x:Name="KhbS" Text="Khb"/>
+                    <TextBlock Grid.Column="10" x:Name="NheS" Text="Nhe"/>
+                    <TextBlock Grid.Column="11" x:Name="Nh0S" Text="Nh0"/>
+                    <TextBlock Grid.Column="12" x:Name="sigmaHpShtS" Text="σ`hp"/>
+                    <TextBlock Grid.Column="13" x:Name="KhlS" Text="Khl"/>
+                    <TextBlock Grid.Column="14" x:Name="YfShtS" Text="Yf`"/>
+                    <TextBlock Grid.Column="15" x:Name="sigmaFpShtS" Text="σ`fp"/>
+                    <TextBlock Grid.Column="16" x:Name="sigmaHpS" Text="σhp"/>
+                    <TextBlock Grid.Column="17" x:Name="mnmS" Text="mnm"/>
+                    <TextBlock Grid.Column="18" x:Name="YfS" Text="Yf"/>
+                    <TextBlock Grid.Column="19" x:Name="xtaoS" Text="xτ"/>
+                    <TextBlock Grid.Column="20" x:Name="psibdS" Text="ψbd"/>
+                    <TextBlock Grid.Column="21" x:Name="KfbS" Text="Kfβ"/>
+                    <TextBlock Grid.Column="22" x:Name="sigmaFpS" Text="σfp"/>
+                    <TextBlock Grid.Column="23" x:Name="KbeS" Text="Kbe"/>
+                
+                    <Border BorderBrush="Black" BorderThickness="0.5" Grid.Column="0"/>
+                    <Border BorderBrush="Black" BorderThickness="0.5" Grid.Column="1"/>
+                    <Border BorderBrush="Black" BorderThickness="0.5" Grid.Column="2"/>
+                    <Border BorderBrush="Black" BorderThickness="0.5" Grid.Column="3"/>
+                    <Border BorderBrush="Black" BorderThickness="0.5" Grid.Column="4"/>
+                    <Border BorderBrush="Black" BorderThickness="0.5" Grid.Column="5"/>
+                    <Border BorderBrush="Black" BorderThickness="0.5" Grid.Column="6"/>
+                    <Border BorderBrush="Black" BorderThickness="0.5" Grid.Column="7"/>
+                    <Border BorderBrush="Black" BorderThickness="0.5" Grid.Column="8"/>
+                    <Border BorderBrush="Black" BorderThickness="0.5" Grid.Column="9"/>
+                    <Border BorderBrush="Black" BorderThickness="0.5" Grid.Column="10"/>
+                    <Border BorderBrush="Black" BorderThickness="0.5" Grid.Column="11"/>
+                    <Border BorderBrush="Black" BorderThickness="0.5" Grid.Column="12"/>
+                    <Border BorderBrush="Black" BorderThickness="0.5" Grid.Column="13"/>
+                    <Border BorderBrush="Black" BorderThickness="0.5" Grid.Column="14"/>
+                    <Border BorderBrush="Black" BorderThickness="0.5" Grid.Column="15"/>
+                    <Border BorderBrush="Black" BorderThickness="0.5" Grid.Column="16"/>
+                    <Border BorderBrush="Black" BorderThickness="0.5" Grid.Column="17"/>
+                    <Border BorderBrush="Black" BorderThickness="0.5" Grid.Column="18"/>
+                    <Border BorderBrush="Black" BorderThickness="0.5" Grid.Column="19"/>
+                    <Border BorderBrush="Black" BorderThickness="0.5" Grid.Column="20"/>
+                    <Border BorderBrush="Black" BorderThickness="0.5" Grid.Column="21"/>
+                    <Border BorderBrush="Black" BorderThickness="0.5" Grid.Column="22"/>
+                    <Border BorderBrush="Black" BorderThickness="0.5" Grid.Column="23"/>
+                </Grid>
+            </Border>
+        </ScrollViewer>
+    </Grid>
+</Window>
